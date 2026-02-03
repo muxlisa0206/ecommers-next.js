@@ -35,7 +35,7 @@ const Footer = () => {
                     />
                   </svg>
                 </div>
-                <button className="w-full bg-white text-black font-semibold py-2.5 sm:py-3 px-4 sm:px-5 rounded-full text-sm sm:text-base hover:bg-gray-100 transition-colors">
+                <button className="w-full bg-white text-black font-semibold py-2.5 sm:py-3 cursor-pointer px-4 sm:px-5 rounded-full text-sm sm:text-base hover:bg-gray-100 transition-colors">
                   Subscribe to Newsletter
                 </button>
               </div>
