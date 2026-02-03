@@ -232,15 +232,15 @@ const HomePage = () => {
 
           <div className="overflow-x-auto gap-3 flex justify-between items-center">
               <Otziv>
-                <h1 className="flex items-center text-[20px] font-bold">Sarah M. <span className="text-green"><BadgeCheck /></span></h1>
+                <h1 className="flex items-center text-[20px] font-bold">Sarah M. <span className="text-green-700"><BadgeCheck /></span></h1>
                 <p className="text-[16px] font-[400] line-clamp-5">Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
               </Otziv>
               <Otziv>
-                <h1 className="flex items-center text-[20px] font-bold">Alex K.. <span className="text-green"><BadgeCheck /></span></h1>
+                <h1 className="flex items-center text-[20px] font-bold">Alex K.. <span className="text-green-700"><BadgeCheck /></span></h1>
                 <p className="text-[16px] font-[400] line-clamp-5">Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
               </Otziv>
               <Otziv>
-                <h1 className="flex items-center text-[20px] font-bold">James L. <span className="text-green"><BadgeCheck /></span></h1>
+                <h1 className="flex items-center text-[20px] font-bold">James L. <span className="text-green-700"><BadgeCheck /></span></h1>
                 <p className="text-[16px] font-[400] line-clamp-5">As someone whos always on the lookout for unique fashion pieces, Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.</p>
               </Otziv>
           </div>
