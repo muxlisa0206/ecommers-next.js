@@ -12,7 +12,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed w-full z-10 py-4 bg-white">
+    <header className="fixed w-full z-10 py-4 bg-white top-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -26,7 +26,7 @@ const Header = () => {
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8">
-          <li><Link href="/shop" className="hover:text-gray-600 font-medium">Shop</Link></li>
+          <li><Link href="/category" className="hover:text-gray-600 font-medium">Shop</Link></li>
           <li><Link href="/on-sale" className="hover:text-gray-600 font-medium">On Sale</Link></li>
           <li><Link href="/new-arrivals" className="hover:text-gray-600 font-medium">New Arrivals</Link></li>
           <li><Link href="/brands" className="hover:text-gray-600 font-medium">Brands</Link></li>
@@ -74,7 +74,7 @@ const Header = () => {
           <ul className="flex flex-col gap-6">
             <li>
               <Link 
-                href="/shop" 
+                href="/category" 
                 className="text-lg hover:text-gray-600 block"
                 onClick={() => setIsMenuOpen(false)}
               >

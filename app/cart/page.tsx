@@ -43,7 +43,7 @@ const CartPage = () => {
                       <h3 className="font-bold text-base sm:text-lg lg:text-xl">
                         Gradient Graphic T-shirt
                       </h3>
-                      <button className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors p-1">
+                      <button className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors p-1 cursor-pointer">
                         <Trash2 className="w-5 h-5 sm:w-6 sm:h-6" />
                       </button>
                     </div>
@@ -59,13 +59,13 @@ const CartPage = () => {
                       <p className="font-bold text-xl sm:text-2xl">$145</p>
 
                       <div className="flex items-center gap-3 sm:gap-4 bg-[#F0F0F0] rounded-full px-4 sm:px-5 py-2 sm:py-2.5">
-                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center cursor-pointer">
                           <span className="text-lg sm:text-xl font-medium">−</span>
                         </button>
                         <span className="font-medium text-sm sm:text-base min-w-[20px] text-center">
                           1
                         </span>
-                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center cursor-pointer">
                           <span className="text-lg sm:text-xl font-medium">+</span>
                         </button>
                       </div>
@@ -88,7 +88,7 @@ const CartPage = () => {
                       <h3 className="font-bold text-base sm:text-lg lg:text-xl">
                         Checkered Shirt
                       </h3>
-                      <button className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors p-1">
+                      <button className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors p-1 cursor-pointer">
                         <Trash2 className="w-5 h-5 sm:w-6 sm:h-6" />
                       </button>
                     </div>
@@ -149,13 +149,13 @@ const CartPage = () => {
                       <p className="font-bold text-xl sm:text-2xl">$240</p>
 
                       <div className="flex items-center gap-3 sm:gap-4 bg-[#F0F0F0] rounded-full px-4 sm:px-5 py-2 sm:py-2.5">
-                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center cursor-pointer">
                           <span className="text-lg sm:text-xl font-medium">−</span>
                         </button>
                         <span className="font-medium text-sm sm:text-base min-w-[20px] text-center">
                           1
                         </span>
-                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
+                        <button className="text-gray-600 hover:text-black transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center cursor-pointer">
                           <span className="text-lg sm:text-xl font-medium">+</span>
                         </button>
                       </div>
@@ -210,13 +210,13 @@ const CartPage = () => {
                       className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 bg-[#F0F0F0] rounded-full text-sm sm:text-base outline-none focus:ring-2 focus:ring-gray-300 transition-all"
                     />
                   </div>
-                  <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-medium text-sm sm:text-base hover:bg-gray-800 transition-colors whitespace-nowrap">
+                  <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-medium text-sm sm:text-base hover:bg-gray-800 transition-colors whitespace-nowrap cursor-pointer">
                     Apply
                   </button>
                 </div>
               </div>
 
-              <button className="w-full bg-black text-white py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 group">
+              <button className="w-full bg-black text-white py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 group cursor-pointer">
                 Go to Checkout
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

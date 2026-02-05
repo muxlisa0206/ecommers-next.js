@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image"
+import Link from "next/link"
 
 type Product = {
     id: number
@@ -17,14 +18,14 @@ type Product = {
   const Arrivals = ({ product }: Props) => {
     return (
       <div className="w-[292px] lg:w-[392px] flex flex-col">
-        <div className="bg-[#F0EEED] rounded-xl relative w-full h-[268px] lg:h-[398px]">
+        <Link href={"/category/single"} className="bg-[#F0EEED] rounded-xl relative w-full h-[268px] lg:h-[398px]">
         <Image
             src={product.image}
             alt={product.title}
             fill
             className="object-contain"
         />
-        </div>
+        </Link>
   
         <h1 className="font-bold text-[20px] line-clamp-1">
           {product.title}
