@@ -18,7 +18,7 @@ type Product = {
   const Arrivals = ({ product }: Props) => {
     return (
       <div className="w-[292px] lg:w-[392px] flex flex-col">
-        <Link href={"/category/single"} className="bg-[#F0EEED] rounded-xl relative w-full h-[268px] lg:h-[398px]">
+        <Link href={"/category/single"} className="bg-[#F0EEED] rounded-xl relative w-[200px] sm:w-full h-[268px] lg:h-[398px]">
         <Image
             src={product.image}
             alt={product.title}

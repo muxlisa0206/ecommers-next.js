@@ -1,9 +1,25 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Trash2, ChevronRight, Tag } from 'lucide-react';
 import Tshirt from "../assets/tshirt.png"
 import Rubashka from "../assets/rubashka.png"
+import { Oswald, League_Spartan } from "next/font/google"
+import type {Metadata} from "next"
+
+export const metadata: Metadata ={
+  title: "Erkaklar kiyimi | CartPage",
+  description: "sjkhvsjhdvkjsdhvwekhcqwoihcw"
+}
+
+const oswald = Oswald({
+  weight: "700",
+  subsets: ["latin"]
+})
+
+const spartan = League_Spartan({
+  weight: "400",
+  subsets: ["latin"]
+})
 
 const CartPage = () => {
   return (
@@ -18,7 +34,7 @@ const CartPage = () => {
           <span className="text-black font-medium">Cart</span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-10">
+        <h1 className={`${spartan.className}text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-10`}>
           YOUR CART
         </h1>
 
@@ -40,7 +56,7 @@ const CartPage = () => {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-start gap-2 mb-2">
-                      <h3 className="font-bold text-base sm:text-lg lg:text-xl">
+                      <h3 className={`${spartan.className}font-bold text-base sm:text-lg lg:text-xl`}>
                         Gradient Graphic T-shirt
                       </h3>
                       <button className="flex-shrink-0 text-red-500 hover:text-red-700 transition-colors p-1 cursor-pointer">
@@ -176,7 +192,7 @@ const CartPage = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between text-gray-600">
                   <span className="text-sm sm:text-base">Subtotal</span>
-                  <span className="font-bold text-black text-base sm:text-lg">
+                  <span className={`${oswald.className} font-bold text-black text-base sm:text-lg`}>
                     $565
                   </span>
                 </div>

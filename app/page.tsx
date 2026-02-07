@@ -17,8 +17,23 @@ import Style3 from "./assets/style3.png"
 import Style4 from "./assets/style4.png"
 import { ArrowLeft, ArrowRight, BadgeCheck } from "lucide-react"
 import Otziv from "./components/otziv/Otziv"
+import { Oswald, League_Spartan } from "next/font/google"
+import type { Metadata } from "next"
 
+const oswald = Oswald({
+  weight: "400",
+  subsets: ["latin"]
+})
 
+const spartan = League_Spartan({
+  weight: "700",
+  subsets: ["latin"]
+})
+
+export const metadata: Metadata ={
+  title: "Zamonaviy kiyimlar | aksessuarlar | HomePage",
+  description: "sjkhvsjhdvkjsdhvwekhcqwoihcw"
+}
 
 const products = [
   {
@@ -57,18 +72,27 @@ const products = [
 
 
 const HomePage = () => {
+
+  const getData = async()=>{
+    const res = await fetch(`https://fakestoreapi.com/products`);
+    return res
+  }
+
+  console.log(getData);
+  
+
   return (
     <Fragment>
       <div className='bg-[#F2F0F1]'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row gap-8 lg:gap-12 pt-10 sm:pt-16 lg:pt-24 pb-10 lg:pb-0 justify-between items-center'>
+          <div className='flex flex-col lg:flex-row gap-8 lg:gap-12 pt-15 sm:pt-20 lg:pt-24 pb-10 lg:pb-0 justify-between items-center'>
             
             <div className='flex flex-col gap-5 lg:gap-8 max-w-full lg:max-w-[577px] w-full'>
-              <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-[64px] xl:text-[70px] font-bold leading-tight lg:leading-[1.1]'>
+              <h1 className={`${spartan.className} text-4xl sm:text-5xl md:text-6xl lg:text-[64px] xl:text-[70px] font-bold leading-tight lg:leading-[1.1]`}>
                 FIND CLOTHES THAT MATCHES YOUR STYLE
               </h1>
               
-              <p className="text-sm sm:text-base text-[#00000099] font-normal max-w-full lg:max-w-[545px]">
+              <p className={`${oswald.className}text-sm sm:text-base text-[#00000099] font-normal max-w-full lg:max-w-[545px]`}>
                 Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
               </p>
               
@@ -124,7 +148,7 @@ const HomePage = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-[48px] font-bold text-center my-[20px]">
+      <h2 className={`${spartan.className}text-[32px] sm:text-[48px] font-bold text-center my-[20px]`}>
         NEW ARRIVALS
       </h2>
 
@@ -145,7 +169,7 @@ const HomePage = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-[48px] font-bold uppercase text-center my-[20px]">
+        <h2 className={`${spartan.className}text-[32px] sm:text-[48px] font-bold text-center my-[20px]`}>
           Top selling
         </h2>
 
@@ -167,7 +191,7 @@ const HomePage = () => {
 
       <div className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-[#F0F0F0] rounded-[40px]">
-          <h1 className="text-[48px] font-bold uppercase text-center pb-5">BROWSE BY dress STYLE</h1>
+          <h1 className={`${spartan.className}text-[32px] sm:text-[48px] font-bold uppercase text-center pb-5`}>BROWSE BY dress STYLE</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             <div className="sm:col-span-2 lg:col-span-1 relative overflow-hidden rounded-[20px] group cursor-pointer">
               <div className="relative w-full h-[250px] sm:h-[280px] lg:h-[320px]">
@@ -177,7 +201,7 @@ const HomePage = () => {
                   fill
                   className="object-cover scale-x-[-1]"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[36px] pt-5 pl-10 ">Casual</div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[24px] sm:text-[36px] pt-5 pl-10 ">Casual</div>
               </div>
             </div>
 
@@ -189,7 +213,7 @@ const HomePage = () => {
                   fill
                   className="object-cover scale-x-[-1]"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[36px] pt-5 pl-10">Formal</div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[24px] sm:text-[36px] pt-5 pl-10">Formal</div>
               </div>
             </div>
 
@@ -201,7 +225,7 @@ const HomePage = () => {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[36px] pt-5 pl-10">Party</div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[24px] sm:text-[36px] pt-5 pl-10">Party</div>
               </div>
             </div>
 
@@ -213,7 +237,7 @@ const HomePage = () => {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[36px] pt-5 pl-10">Gym</div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 font-bold text-[24px] sm:text-[36px] pt-5 pl-10">Gym</div>
               </div>
             </div>
 
@@ -223,7 +247,7 @@ const HomePage = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-30">
           <div className="flex items-center justify-between">
-            <h1 className="text-[34px] sm:text-[48px] font-bold uppercase text-center">Our happy customers</h1>
+            <h1 className={`${spartan.className} text-[32px] sm:text-[48px] font-bold uppercase text-left`}>Our happy customers</h1>
             <div className="flex items-center gap-1">
               <ArrowLeft />
               <ArrowRight />
@@ -233,15 +257,15 @@ const HomePage = () => {
           <div className="overflow-x-auto gap-3 flex justify-between items-center">
               <Otziv>
                 <h1 className="flex items-center text-[20px] font-bold">Sarah M. <span className="text-green-700"><BadgeCheck /></span></h1>
-                <p className="text-[16px] font-[400] line-clamp-5">Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
+                <p className={`${oswald.className} text-[16px] font-[400] line-clamp-5`}>Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
               </Otziv>
               <Otziv>
                 <h1 className="flex items-center text-[20px] font-bold">Alex K.. <span className="text-green-700"><BadgeCheck /></span></h1>
-                <p className="text-[16px] font-[400] line-clamp-5">Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
+                <p className={`${oswald.className} text-[16px] font-[400] line-clamp-5`}>Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.</p>
               </Otziv>
               <Otziv>
                 <h1 className="flex items-center text-[20px] font-bold">James L. <span className="text-green-700"><BadgeCheck /></span></h1>
-                <p className="text-[16px] font-[400] line-clamp-5">As someone whos always on the lookout for unique fashion pieces, Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.</p>
+                <p className={`${oswald.className} text-[16px] font-[400] line-clamp-5`}>As someone whos always on the lookout for unique fashion pieces, Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.</p>
               </Otziv>
           </div>
       </div>

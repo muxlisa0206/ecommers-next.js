@@ -7,6 +7,7 @@ import Account from '../../assets/account.svg'
 import Menu from '../../assets/menu.svg'
 import Search from '../../assets/search.svg'
 import Link from 'next/link'
+import Navlink from '../navlink/Navlink'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,10 +27,10 @@ const Header = () => {
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8">
-          <li><Link href="/category" className="hover:text-gray-600 font-medium">Shop</Link></li>
-          <li><Link href="/on-sale" className="hover:text-gray-600 font-medium">On Sale</Link></li>
-          <li><Link href="/new-arrivals" className="hover:text-gray-600 font-medium">New Arrivals</Link></li>
-          <li><Link href="/brands" className="hover:text-gray-600 font-medium">Brands</Link></li>
+          <li><Navlink href={"/category"} className="hover:text-gray-600 font-medium">Shop</Navlink></li>
+          <li><Navlink href={"/on-sale"} className="hover:text-gray-600 font-medium">On Sale</Navlink></li>
+          <li><Navlink href={"/new-arrivals"} className="hover:text-gray-600 font-medium">New Arrivals</Navlink></li>
+          <li><Navlink href={"/brands" }className="hover:text-gray-600 font-medium">Brands</Navlink></li>
         </ul>
 
         <div className="hidden xl:flex w-full max-w-144.25 h-12 items-center gap-3 
