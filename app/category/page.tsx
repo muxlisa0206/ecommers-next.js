@@ -134,7 +134,6 @@ const CategoryPage = () => {
 
   return (
     <div className="flex min-h-screen bg-white mt-20 mb-25">
-      {/* Filters Sidebar - faqat md dan keyin ko'rinadi */}
       <div className="hidden md:block md:w-80 border-r border-gray-200 p-6 h-[calc(100vh-80px)]">
         <div className="flex items-center justify-between mb-6">
           <h2 className={`${oswald.className} text-xl font-bold`}>Filters</h2>
@@ -262,10 +261,7 @@ const CategoryPage = () => {
           Apply Filter
         </button>
       </div>
-
-      {/* Products Section */}
       <div className="flex-1 p-4 md:p-8">
-        {/* Mobile Filter Button */}
         <button 
           onClick={() => setShowFilters(!showFilters)}
           className="md:hidden mb-4 w-full bg-black text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 cursor-pointer"
@@ -275,8 +271,6 @@ const CategoryPage = () => {
           </svg>
           Filters
         </button>
-
-        {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 md:mb-8 gap-4">
           <h1 className={`${oswald.className} text-2xl md:text-4xl font-bold`}>Casual</h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full md:w-auto">
@@ -293,7 +287,6 @@ const CategoryPage = () => {
           </div>
         </div>
 
-        {/* Products Grid - mobile da 2, md dan keyin 3 */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
           {products.map((product) => (
             <div key={product.id} className="group cursor-pointer">
@@ -336,10 +329,7 @@ const CategoryPage = () => {
             </div>
           ))}
         </div>
-
-        {/* Pagination */}
         <div className="flex items-center justify-center gap-1 md:gap-2 pt-6 md:pt-8 border-t border-gray-200">
-          {/* Previous Button */}
           <button
             onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
             disabled={currentPage === 1}
@@ -353,8 +343,6 @@ const CategoryPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-
-          {/* Page Numbers */}
           <div className="flex items-center gap-1 md:gap-2">
             {getPageNumbers().map((page, index) => (
               <button
@@ -373,8 +361,6 @@ const CategoryPage = () => {
               </button>
             ))}
           </div>
-
-          {/* Next Button */}
           <button
             onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
             disabled={currentPage === totalPages}
